@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Roche_test
+//  practice
 //
-//  Created by kidnapper on 06/12/2017.
-//  Copyright © 2017 25sprout.com. All rights reserved.
+//  Created by kidnapper on 06/11/2017.
+//  Copyright © 2017 kidnapper.com. All rights reserved.
 //
 
 import UIKit
@@ -14,8 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        <#code#>
+//    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+//        FirebaseApp.configure()
         return true
     }
 
