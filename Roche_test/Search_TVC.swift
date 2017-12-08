@@ -26,7 +26,7 @@ class Search_TVC: UITableViewController{
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        tableView.reloadData()
+//        tableView.reloadData()
     }
     
     
@@ -56,8 +56,8 @@ class Search_TVC: UITableViewController{
             cell.subtitle.text = array_subtitle[number][indexPath.item]
             cell.backgroundColor = UIColor.red
         }else{
-            cell.title.text = "please check internet"
-            cell.subtitle.text = "please check internet"
+            cell.title.text = "please check internet please check internet please check internet please check internet"
+            cell.subtitle.text = "please check internet please check internet please check internet please check internet please check internet"
             cell.backgroundColor = UIColor.red
         }
         

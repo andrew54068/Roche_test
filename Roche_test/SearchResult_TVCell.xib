@@ -15,23 +15,20 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="62.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qz5-Gf-fP3" userLabel="title">
-                        <rect key="frame" x="15" y="10" width="42" height="22"/>
+                        <rect key="frame" x="15" y="10" width="290" height="22"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="22" id="bpG-ON-XgJ"/>
+                            <constraint firstAttribute="height" constant="22" id="Rg6-xF-Rtk"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSL-bl-US7" userLabel="subtitle">
-                        <rect key="frame" x="15" y="32" width="33" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="18" id="ZLl-8f-sDf"/>
-                        </constraints>
+                        <rect key="frame" x="15" y="32" width="290" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -39,7 +36,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="qz5-Gf-fP3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="9b2-GJ-exu"/>
+                    <constraint firstAttribute="trailing" secondItem="ZSL-bl-US7" secondAttribute="trailing" constant="15" id="EBw-f8-8T0"/>
                     <constraint firstItem="qz5-Gf-fP3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="QXE-0V-tn1"/>
+                    <constraint firstAttribute="trailing" secondItem="qz5-Gf-fP3" secondAttribute="trailing" constant="15" id="Uc1-E9-hYs"/>
                     <constraint firstItem="ZSL-bl-US7" firstAttribute="top" secondItem="qz5-Gf-fP3" secondAttribute="bottom" id="rn3-5n-YnL"/>
                     <constraint firstItem="ZSL-bl-US7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="vWI-ot-EST"/>
                     <constraint firstAttribute="bottom" secondItem="ZSL-bl-US7" secondAttribute="bottom" constant="13" id="xX5-Ym-zuo"/>
