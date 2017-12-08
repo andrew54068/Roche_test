@@ -44,7 +44,7 @@ class TabPageViewController: UIPageViewController {
         
         setupPageViewController()
         setupScrollView()
-        updateNavigationBar()
+//        updateNavigationBar()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +62,7 @@ class TabPageViewController: UIPageViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        updateNavigationBar()
+//        updateNavigationBar()
         tabView.layouted = true
     }
 
@@ -97,7 +97,9 @@ extension TabPageViewController {
             completion: completion)
 
         guard isViewLoaded else { return }
+
         tabView.updateCurrentIndex(index, shouldScroll: true)
+
     }
 }
 
@@ -163,9 +165,41 @@ extension TabPageViewController {
     }
     
     func handleSearch(){
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(identifier: "com.25sprout.RocheTest")
-//        let search_TPVC = storyboard.instantiateViewController(withIdentifier: "search_TPVC") as! Search_TPVC
-//        navigationController?.pushViewController(search_TPVC, animated: true)
+
+//        let search_TPVC = Search_TPVC()
+//        
+//        let result_TVC_All = Search_TVC()
+//        let result_TVC_CongressUpdate = Search_TVC()
+//        let result_TVC_ExpertCommentary = Search_TVC()
+//        let result_TVC_Event = Search_TVC()
+//        let result_TVC_TrailFactSheet = Search_TVC()
+//        let result_TVC_Bookmark = Search_TVC()
+//        
+//        let grayColor = UIColor(red: 155/255, green: 155/255, blue: 155/255, alpha: 1)
+//        let attrs = [NSFontAttributeName: UIFont.systemFont(ofSize: 17), NSForegroundColorAttributeName: grayColor ]
+//        let all_text = NSMutableAttributedString(string: "ALL", attributes: attrs)
+//        let congressUpdate_text = NSMutableAttributedString(string: "CONGRESS UPDATE", attributes: attrs)
+//        let expertCommentary_text = NSMutableAttributedString(string: "EXPERT COMMENTARY", attributes: attrs)
+//        let event_text = NSMutableAttributedString(string: "EVENT", attributes: attrs)
+//        let trailFactSheet_text = NSMutableAttributedString(string: "TRAIL FACT SHEET", attributes: attrs)
+//        
+//        let bookmarkAttachment = NSTextAttachment()
+//        let bookmarkImage = UIImage(named: "icon_btn_bookmark_default")!.withRenderingMode(.alwaysTemplate)
+//        bookmarkAttachment.image = bookmarkImage
+//        bookmarkAttachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 16)
+//        
+//        let attrStringWithImage: NSAttributedString = NSAttributedString(attachment: bookmarkAttachment)
+//        let bookMarktext = NSMutableAttributedString(string: " BOOKMARK", attributes: attrs)
+//        let empty = NSMutableAttributedString(string: " ", attributes: attrs)
+//        empty.append(attrStringWithImage)
+//        empty.append(bookMarktext)
+//        let bookMark_text = empty
+//        
+//        search_TPVC.tabItems = [(result_TVC_All, all_text), (result_TVC_CongressUpdate, congressUpdate_text), (result_TVC_ExpertCommentary, expertCommentary_text), (result_TVC_Event, event_text), (result_TVC_TrailFactSheet, trailFactSheet_text), (result_TVC_Bookmark, bookMark_text)]
+//        
+//        //?? below not as expected!
+//        let navCtrl = UINavigationController(rootViewController: search_TPVC)
+//        present(navCtrl, animated: true, completion: nil)
         print("search being called")
     }
     
@@ -413,9 +447,9 @@ extension TabPageViewController: UIScrollViewDelegate {
         }
 
         let scrollOffsetX = scrollView.contentOffset.x - view.frame.width
-        print("scrollView = \(scrollView.contentOffset.x)")
-        print("frame = \(view.frame.width))")
-        print("scrollOffset = \(scrollOffsetX)")
+//        print("scrollView = \(scrollView.contentOffset.x)")
+//        print("frame = \(view.frame.width))")
+//        print("scrollOffset = \(scrollOffsetX)")
         tabView.scrollCurrentBarView(index, contentOffsetX: scrollOffsetX)
     }
 

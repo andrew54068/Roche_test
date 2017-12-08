@@ -24,20 +24,29 @@ class Search_TVC: UITableViewController{
         
         setupTableView()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        tableView.reloadData()
+    }
     
     
     func setupTableView(){
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
+        tableView.contentInset = UIEdgeInsetsMake(109, 0, 0, 0)
+        tableView.separatorInset = UIEdgeInsets.zero
+        tableView.scrollIndicatorInsets = UIEdgeInsets(top: 109, left: 0, bottom: 0, right: 0)
+        tableView.backgroundColor = UIColor.cyan
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let array = result_title, let number = catagory{
             return array[number].count
         }
-        print("dataBase||catagory is nil")
-        return 0
+
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,11 +54,17 @@ class Search_TVC: UITableViewController{
         if let array_title = result_title, let array_subtitle = result_subtitle, let number = catagory{
             cell.title.text = array_title[number][indexPath.item]
             cell.subtitle.text = array_subtitle[number][indexPath.item]
+            cell.backgroundColor = UIColor.red
         }else{
             cell.title.text = "please check internet"
             cell.subtitle.text = "please check internet"
+            cell.backgroundColor = UIColor.red
         }
         
         return cell
     }
+//    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 
+//    }
 }

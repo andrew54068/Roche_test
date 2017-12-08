@@ -41,11 +41,6 @@ class Main_VC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
         let BannerNib = UINib(nibName: "BannerCategoryCell", bundle: nil)
         collectionView!.register(BannerNib, forCellWithReuseIdentifier: BannerCellId)
         
-//        let image = UIImage(named: "icon_btn_arrow_blue")
-//        
-//        navigationController?.navigationBar.backIndicatorImage = image
-//        navigationController?.navigationBar.backIndicatorTransitionMaskImage = image
-        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         //wait for angie
@@ -57,9 +52,9 @@ class Main_VC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
         
         // -Paul
         
-        let storyboard = UIStoryboard(name: "PaulMain", bundle: nil)
-        let login = storyboard.instantiateInitialViewController() as! UINavigationController
-        self.present(login, animated: false, completion: nil)
+//        let storyboard = UIStoryboard(name: "PaulMain", bundle: nil)
+//        let login = storyboard.instantiateInitialViewController() as! UINavigationController
+//        self.present(login, animated: false, completion: nil)
     }
     
     func setUpNavigationBar(){
@@ -95,10 +90,7 @@ class Main_VC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
     //MARK: right navigation item action
     func handleSearch(){
-//        let storyboard = UIStoryboard(name: "TabPageViewController", bundle: Bundle(for: TabPageViewController.self))
-//        let storyboard = UIStoryboard(name: "Search_TPVC", bundle: nil)
-//        let search_TPVC: Search_TPVC = storyboard.instantiateInitialViewController() as! Search_TPVC
-//            as! Search_TPVC
+
         let search_TPVC = Search_TPVC()
         
         let result_TVC_All = Search_TVC()
@@ -131,7 +123,8 @@ class Main_VC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
         search_TPVC.tabItems = [(result_TVC_All, all_text), (result_TVC_CongressUpdate, congressUpdate_text), (result_TVC_ExpertCommentary, expertCommentary_text), (result_TVC_Event, event_text), (result_TVC_TrailFactSheet, trailFactSheet_text), (result_TVC_Bookmark, bookMark_text)]
         
         //?? below not as expected!
-        navigationController?.pushViewController(search_TPVC, animated: true)
+        let navCtrl = UINavigationController(rootViewController: search_TPVC)
+        present(navCtrl, animated: true, completion: nil)
         print("search being called")
     }
     
@@ -170,6 +163,10 @@ class Main_VC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
         
         self.navigationController?.pushViewController(tc, animated: true)
 //        self.performSegue(withIdentifier: "seeAll", sender: self)
+    }
+    
+    func nav(tabPageViewController: TabPageViewController){
+        self.navigationController?.pushViewController(tabPageViewController, animated: true)
     }
     
     func showArticle(){

@@ -159,10 +159,8 @@ class Bookmark_VC: UITableViewController {
         
         if cell.attributedString == nil{
             cell.attributedString = attributedString1
-            print("cell attri = nil : \(cell.attributedString!)")
         }else{
             cell.attributedString.append(attributedString1)
-            print("cell attri != nil : \(cell.attributedString!)")
         }
         cell.title.attributedText = cell.attributedString!
         cell.title.numberOfLines = 4

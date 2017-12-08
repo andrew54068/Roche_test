@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Search_TPVC: TabPageViewController{
+class Search_TPVC: TabPageViewController, UISearchBarDelegate{
     
     var searchBarView: SearchBarView?
     
@@ -23,27 +23,31 @@ class Search_TPVC: TabPageViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarSetup()
-        self.modalTransitionStyle = .coverVertical
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        searchBarView!.removeFromSuperview()
-    }
-    
     func navigationBarSetup(){
-        let searchBar_nib = UINib(nibName: "SearchBarView", bundle: nil)
-        searchBarView = searchBar_nib.instantiate(withOwner: nil, options: nil).first as? SearchBarView
-        UIApplication.shared.keyWindow?.addSubview(searchBarView!)
-        //        self.view.addSubview(searchBarView)
-        searchBarView!.frame = CGRect(x: 0, y: 20, width: UIScreen.main.bounds.width, height: 44)
-        searchBarView!.cancel.addTarget(self, action: #selector(backToPreviousVC), for: .touchUpInside)
-        //        navigationController?.isNavigationBarHidden = true
-        //        navigationBar = searchBarView
+        navigationController?.navigationBar.backgroundColor = UIColor.white
+
+        let searchBar = UISearchBar()
+        searchBar.showsCancelButton = true
+        searchBar.placeholder = "Search"
+        searchBar.barTintColor = UIColor.white
+        let searchField = searchBar.value(forKey: "searchField") as? UITextField
+        searchField?.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        searchField?.becomeFirstResponder()
+        
+        let attributes = [NSForegroundColorAttributeName: UIColor(red: 0, green: 102/255, blue: 204/255, alpha: 1)]
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(attributes, for: .normal)
+        
+        searchBar.delegate = self
+        
+        navigationItem.titleView = searchBar
     }
     
-    func backToPreviousVC(){
-        navigationController?.popViewController(animated: true)
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.dismiss(animated: true, completion: nil)
     }
+    
+    
 }

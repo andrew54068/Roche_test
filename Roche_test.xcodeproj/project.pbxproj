@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CA0F22F9FB37E030E3A9C91 /* Pods_Roche_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DB00EBAFABCD5C99578632 /* Pods_Roche_test.framework */; };
 		6D95946D1FD7E23E00731B2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D95946C1FD7E23E00731B2D /* AppDelegate.swift */; };
 		6D9594721FD7E23E00731B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9594701FD7E23E00731B2D /* Main.storyboard */; };
 		6D9594741FD7E23E00731B2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D9594731FD7E23E00731B2D /* Assets.xcassets */; };
@@ -85,9 +86,12 @@
 		6D9595161FD7E90900731B2D /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9595151FD7E90900731B2D /* AppUtilities.swift */; };
 		6D9595191FD7E98F00731B2D /* TabCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9595171FD7E98F00731B2D /* TabCollectionCell.swift */; };
 		6D95951A1FD7E98F00731B2D /* TabCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D9595181FD7E98F00731B2D /* TabCollectionCell.xib */; };
+		6D95951C1FD7FC1B00731B2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D95951B1FD7FC1B00731B2D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BC2593C4AFE971F8E6B22FF /* Pods-Roche_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roche_test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Roche_test/Pods-Roche_test.release.xcconfig"; sourceTree = "<group>"; };
+		53DB00EBAFABCD5C99578632 /* Pods_Roche_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roche_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D9594691FD7E23E00731B2D /* Roche_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roche_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D95946C1FD7E23E00731B2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D9594711FD7E23E00731B2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +172,9 @@
 		6D9595151FD7E90900731B2D /* AppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppUtilities.swift; path = Roche_test/AppUtilities.swift; sourceTree = "<group>"; };
 		6D9595171FD7E98F00731B2D /* TabCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabCollectionCell.swift; path = Roche_test/TabCollectionCell.swift; sourceTree = "<group>"; };
 		6D9595181FD7E98F00731B2D /* TabCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TabCollectionCell.xib; path = Roche_test/TabCollectionCell.xib; sourceTree = "<group>"; };
+		6D95951B1FD7FC1B00731B2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6D9B75F11FD7FDA700AACE87 /* Roche_test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roche_test.entitlements; sourceTree = "<group>"; };
+		F8A686909C29CDE705373C99 /* Pods-Roche_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roche_test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Roche_test/Pods-Roche_test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,12 +182,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA0F22F9FB37E030E3A9C91 /* Pods_Roche_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A0E93DA07104DB7F650EB07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8A686909C29CDE705373C99 /* Pods-Roche_test.debug.xcconfig */,
+				0BC2593C4AFE971F8E6B22FF /* Pods-Roche_test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6D9594601FD7E23E00731B2D = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +205,8 @@
 				6D95947E1FD7E27100731B2D /* Paul */,
 				6D95946B1FD7E23E00731B2D /* Roche_test */,
 				6D95946A1FD7E23E00731B2D /* Products */,
+				3A0E93DA07104DB7F650EB07 /* Pods */,
+				90F559130449A5CA9FAC5EB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +221,7 @@
 		6D95946B1FD7E23E00731B2D /* Roche_test */ = {
 			isa = PBXGroup;
 			children = (
+				6D9B75F11FD7FDA700AACE87 /* Roche_test.entitlements */,
 				6D9594831FD7E2C700731B2D /* Cell */,
 				6D9594821FD7E2C200731B2D /* VC */,
 				6D9594801FD7E28C00731B2D /* Article */,
@@ -210,6 +230,7 @@
 				6D9594731FD7E23E00731B2D /* Assets.xcassets */,
 				6D9594751FD7E23E00731B2D /* LaunchScreen.storyboard */,
 				6D9594781FD7E23F00731B2D /* Info.plist */,
+				6D95951B1FD7FC1B00731B2D /* GoogleService-Info.plist */,
 			);
 			path = Roche_test;
 			sourceTree = "<group>";
@@ -347,6 +368,14 @@
 			name = ArticleContentView;
 			sourceTree = "<group>";
 		};
+		90F559130449A5CA9FAC5EB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53DB00EBAFABCD5C99578632 /* Pods_Roche_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -354,9 +383,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D95947B1FD7E23F00731B2D /* Build configuration list for PBXNativeTarget "Roche_test" */;
 			buildPhases = (
+				94F687843FFE508D6AE41A95 /* [CP] Check Pods Manifest.lock */,
 				6D9594651FD7E23E00731B2D /* Sources */,
 				6D9594661FD7E23E00731B2D /* Frameworks */,
 				6D9594671FD7E23E00731B2D /* Resources */,
+				8F180023FB79D90AB9B577B7 /* [CP] Embed Pods Frameworks */,
+				258291ECA43E8E98E9804992 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -381,6 +413,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = L2KP5DU4HL;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -420,6 +457,7 @@
 				6D9594A41FD7E5AA00731B2D /* TableViewCell.xib in Resources */,
 				6D9594DA1FD7E74200731B2D /* PaulMain.storyboard in Resources */,
 				6D9594A81FD7E60600731B2D /* SquareCollectionViewCell.xib in Resources */,
+				6D95951C1FD7FC1B00731B2D /* GoogleService-Info.plist in Resources */,
 				6D9594D01FD7E6F900731B2D /* Reference_TVCell.xib in Resources */,
 				6D9594961FD7E54B00731B2D /* ThumbnailHeader_TVCell.xib in Resources */,
 				6D95951A1FD7E98F00731B2D /* TabCollectionCell.xib in Resources */,
@@ -438,6 +476,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		258291ECA43E8E98E9804992 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Roche_test/Pods-Roche_test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F180023FB79D90AB9B577B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Roche_test/Pods-Roche_test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Roche_test/Pods-Roche_test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94F687843FFE508D6AE41A95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Roche_test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6D9594651FD7E23E00731B2D /* Sources */ = {
@@ -617,8 +711,10 @@
 		};
 		6D95947C1FD7E23F00731B2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8A686909C29CDE705373C99 /* Pods-Roche_test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Roche_test/Roche_test.entitlements;
 				DEVELOPMENT_TEAM = L2KP5DU4HL;
 				INFOPLIST_FILE = Roche_test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -630,8 +726,10 @@
 		};
 		6D95947D1FD7E23F00731B2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BC2593C4AFE971F8E6B22FF /* Pods-Roche_test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Roche_test/Roche_test.entitlements;
 				DEVELOPMENT_TEAM = L2KP5DU4HL;
 				INFOPLIST_FILE = Roche_test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

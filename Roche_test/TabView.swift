@@ -196,6 +196,7 @@ extension TabView {
         let indexPath = IndexPath(item: currentIndex, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
         collectionViewContentOffsetX = collectionView.contentOffset.x
+        print("#############################################")
     }
 
     /**

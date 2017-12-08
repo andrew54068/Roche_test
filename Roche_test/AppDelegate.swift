@@ -7,20 +7,56 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
-//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-//        <#code#>
-//    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        FirebaseApp.configure()
+        FirebaseApp.configure()
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if let dynamicLink = DynamicLinks.dynamicLinks()?.dynamicLink(fromCustomSchemeURL: url) {
+            //for the first time install after click dynamicLink.
+            print("handling a link through open url!!")
+            handleIncomingDynamicLink(dynamicLink: dynamicLink)
+            return true
+        }
+        return false
+    }
+
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        if let incomingURL = userActivity.webpageURL {
+            let linkHandled = DynamicLinks.dynamicLinks()!.handleUniversalLink(incomingURL, completion: { (dynamicLink, error) in
+                if let dl = dynamicLink, let _ = dl.url{
+                    self.handleIncomingDynamicLink(dynamicLink: dl)
+                }
+                else{
+                    print("error = \(String(describing: error))")
+                }
+            })
+            return linkHandled
+        }
+        return false
+    }
+    
+    func handleIncomingDynamicLink(dynamicLink: DynamicLink){
+        print("your incoming dynamicLink parameter is \(String(describing: dynamicLink.url))")
+        if let path = dynamicLink.url?.path{
+            if path == "/seeAll"{
+                let navigationController = self.window!.rootViewController as! UINavigationController
+                if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "article_TVC") as? Article_TVC{
+                    navigationController.pushViewController(vc, animated: true)
+                }
+            }
+            else{
+                print("do nothing")
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
